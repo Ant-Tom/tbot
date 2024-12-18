@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: "1"
+      author: "your_name"
+      changes:
+        - createTable:
+            tableName: "notification_task"
+            columns:
+              - column:
+                  name: "id"
+                  type: "bigint"
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: "chat_id"
+                  type: "bigint"
+                  constraints:
+                    nullable: false
+              - column:
+                  name: "message_text"
+                  type: "varchar(255)"
+                  constraints:
+                    nullable: false
+              - column:
+                  name: "notification_time"
+                  type: "timestamp"
+                  constraints:
+                    nullable: false
